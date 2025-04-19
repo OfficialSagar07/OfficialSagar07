@@ -1,0 +1,513 @@
+1) Addition of Two Numbers
+
+#include <stdio.h>
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("Sum: %d\n", add(num1, num2));
+    return 0;
+}
+
+
+2) Subtraction of Two Numbers
+
+#include <stdio.h>
+
+int subtract(int a, int b) {
+    return a - b;
+}
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("Difference: %d\n", subtract(num1, num2));
+    return 0;
+}
+
+
+3) Multiplication of Two Numbers
+
+#include <stdio.h>
+
+int multiply(int a, int b) {
+    return a * b;
+}
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("Product: %d\n", multiply(num1, num2));
+    return 0;
+}
+
+
+4) Division of Two Numbers
+
+#include <stdio.h>
+
+float divide(int a, int b) {
+    return (float)a / b;
+}
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    if (num2 != 0) {
+        printf("Quotient: %.2f\n", divide(num1, num2));
+    } else {
+        printf("Division by zero is not allowed.\n");
+    }
+    return 0;
+}
+
+
+5) Find Maximum of Two Numbers
+
+#include <stdio.h>
+
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("Maximum: %d\n", max(num1, num2));
+    return 0;
+}
+
+
+6) Find Minimum of Two Numbers
+
+#include <stdio.h>
+
+int min(int a, int b) {
+    return (a < b) ? a : b;
+}
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("Minimum: %d\n", min(num1, num2));
+    return 0;
+}
+
+
+7) Check Even or Odd
+
+#include <stdio.h>
+
+int isEven(int n) {
+    return n % 2 == 0;
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (isEven(num))
+        printf("%d is even.\n", num);
+    else
+        printf("%d is odd.\n", num);
+    return 0;
+}
+
+
+8) Sum of Natural Numbers up to N
+
+#include <stdio.h>
+
+int sumNatural(int n) {
+    return n * (n + 1) / 2;
+}
+
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    printf("Sum of natural numbers up to %d is: %d\n", n, sumNatural(n));
+    return 0;
+}
+
+
+9) Check Leap Year
+
+#include <stdio.h>
+
+int isLeapYear(int year) {
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+}
+
+int main() {
+    int year;
+    printf("Enter a year: ");
+    scanf("%d", &year);
+    if (isLeapYear(year))
+        printf("%d is a leap year.\n", year);
+    else
+        printf("%d is not a leap year.\n", year);
+    return 0;
+}
+
+
+10) Find Square of a Number
+
+#include <stdio.h>
+
+int square(int n) {
+    return n * n;
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Square of %d is %d\n", num, square(num));
+    return 0;
+}
+
+
+11) Find Cube of a Number
+
+#include <stdio.h>
+
+int cube(int n) {
+    return n * n * n;
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Cube of %d is %d\n", num, cube(num));
+    return 0;
+}
+
+
+12) Print Fibonacci Series
+
+#include <stdio.h>
+
+void fibonacci(int n) {
+    int a = 0, b = 1, next;
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a);
+        next = a + b;
+        a = b;
+        b = next;
+    }
+    printf("\n");
+}
+
+int main() {
+    int terms;
+    printf("Enter the number of terms: ");
+    scanf("%d", &terms);
+    fibonacci(terms);
+    return 0;
+}
+
+
+13) Check Positive or Negative
+
+#include <stdio.h>
+
+int isPositive(int n) {
+    return n > 0;
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (isPositive(num))
+        printf("%d is positive.\n", num);
+    else
+        printf("%d is negative.\n", num);
+    return 0;
+}
+
+
+14)  Count Digits in a Number
+
+#include <stdio.h>
+
+int countDigits(int n) {
+    int count = 0;
+    while (n != 0) {
+        count++;
+        n /= 10;
+    }
+    return count;
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Number of digits: %d\n", countDigits(num));
+    return 0;
+}
+
+
+15) Find Length of a String
+
+#include <stdio.h>
+
+int stringLength(char str[]) {
+    int length = 0;
+    while (str[length] != '\0') length++;
+    return length;
+}
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%s", str);
+    printf("Length of the string is: %d\n", stringLength(str));
+    return 0;
+}
+
+
+16) Convert Celsius to Fahrenheit
+
+#include <stdio.h>
+
+float celsiusToFahrenheit(float celsius) {
+    return (celsius * 9 / 5) + 32;
+}
+
+int main() {
+    float celsius;
+    printf("Enter temperature in Celsius: ");
+    scanf("%f", &celsius);
+    printf("Temperature in Fahrenheit: %.2f°F\n", celsiusToFahrenheit(celsius));
+    return 0;
+}
+
+
+17) Find the Greatest Number Among Three Numbers
+
+#include <stdio.h>
+
+int findGreatest(int a, int b, int c) {
+    if (a > b && a > c) {
+        return a;
+    } else if (b > c) {
+        return b;
+    } else {
+        return c;
+    }
+}
+
+int main() {
+    int num1, num2, num3;
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+    printf("The greatest number is: %d\n", findGreatest(num1, num2, num3));
+    return 0;
+}
+
+
+
+18) Reverse a Number
+
+#include <stdio.h>
+
+int reverseNumber(int n) {
+    int reverse = 0;
+    while (n != 0) {
+        reverse = reverse * 10 + (n % 10);
+        n /= 10;
+    }
+    return reverse;
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("The reverse of the number is: %d\n", reverseNumber(num));
+    return 0;
+}
+
+
+19) Calculate Factorial of a Number
+
+#include <stdio.h>
+
+int factorial(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (num < 0) {
+        printf("Factorial of a negative number is undefined.\n");
+    } else {
+        printf("Factorial of %d is %d\n", num, factorial(num));
+    }
+    return 0;
+}
+
+
+20) Check Prime Number
+
+#include <stdio.h>
+
+int isPrime(int n) {
+    if (n <= 1) return 0;
+    for (int i = 2; i <= n / 2; i++) {
+        if (n % i == 0) return 0;
+    }
+    return 1;
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (isPrime(num))
+        printf("%d is a prime number.\n", num);
+    else
+        printf("%d is not a prime number.\n", num);
+    return 0;
+}
+
+
+21) Calculate Power of a Number
+
+#include <stdio.h>
+
+int power(int base, int exp) {
+    int result = 1;
+    for (int i = 0; i < exp; i++) {
+        result *= base;
+    }
+    return result;
+}
+
+int main() {
+    int base, exp;
+    printf("Enter base and exponent: ");
+    scanf("%d %d", &base, &exp);
+    printf("%d raised to the power of %d is %d\n", base, exp, power(base, exp));
+    return 0;
+}
+
+
+22) Find GCD (Greatest Common Divisor)
+
+#include <stdio.h>
+
+int gcd(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("GCD of %d and %d is %d\n", num1, num2, gcd(num1, num2));
+    return 0;
+}
+
+
+23) Calculate LCM (Least Common Multiple)
+
+#include <stdio.h>
+
+int gcd(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int lcm(int a, int b) {
+    return (a * b) / gcd(a, b);
+}
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    printf("LCM of %d and %d is %d\n", num1, num2, lcm(num1, num2));
+    return 0;
+}
+
+
+24) Calculate Sum of Array Elements
+
+#include <stdio.h>
+
+int sumArray(int arr[], int size) {
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+int main() {
+    int n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter the elements:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("Sum of the array elements is: %d\n", sumArray(arr, n));
+    return 0;
+}
+
+
+25) Reverse an Array
+
+#include <stdio.h>
+
+void reverseArray(int arr[], int size) {
+    printf("Reversed array: ");
+    for (int i = size - 1; i >= 0; i--) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter the elements:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    reverseArray(arr, n);
+    return 0;
+}
