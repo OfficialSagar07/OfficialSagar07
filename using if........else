@@ -1,0 +1,89 @@
+a and b are equal or not equal
+
+#include<stdio.h>
+#include<conio.h>
+
+int main() {
+int a,b;
+printf("enter the value of a and b");
+scanf("%d%d",&a,&b);
+if (a==b){
+printf("a and b are equal");
+}
+else{
+printf("a and b are not equal");
+}
+}
+
+
+
+c is equal to a into b or not
+
+#include<stdio.h>
+#include<conio.h>
+
+int main() {
+int a,b,c;
+printf("enter the value of a,b and c");
+scanf("%d%d%d",&a,&b,&c);
+if (c!=a*b){
+printf("a,b and c are not equal");
+}
+else{
+printf("a,b and c are equal");
+}
+}
+
+
+c equal to a/b
+
+#include<stdio.h>
+#include<conio.h>
+
+int main() {
+int a,b,c;
+printf("enter the value of a,b and c");
+scanf("%d%d%d",&a,&b,&c);
+if (c!=a/b){
+printf("a,b and c are not equal");
+}
+else{
+printf("a,b and c are equal");
+}
+}
+
+
+c equal to a+b
+
+#include<stdio.h>
+#include<conio.h>
+
+int main() {
+int a,b,c;
+printf("enter the value of a,b and c");
+scanf("%d%d%d",&a,&b,&c);
+if (c==a+b){
+printf("a,b and c are equal");
+}
+else{
+printf("a,b and c are not equal");
+}
+}
+
+
+c equal to a-b
+
+#include<stdio.h>
+#include<conio.h>
+
+int main() {
+int a,b,c;
+printf("enter the value of a,b and c");
+scanf("%d%d%d",&a,&b,&c);
+if (c==a-b){
+printf("a,b and c are equal");
+}
+else{
+printf("a,b and c are not equal");
+}
+}
